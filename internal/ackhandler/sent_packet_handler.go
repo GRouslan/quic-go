@@ -24,7 +24,7 @@ const (
 	// We use Retry packets to derive an RTT estimate. Make sure we don't set the RTT to a super low value yet.
 	minRTTAfterRetry = 5 * time.Millisecond
 	// The PTO duration uses exponential backoff, but is truncated to a maximum value, as allowed by RFC 8961, section 4.4.
-	maxPTODuration = 60 * time.Second
+	maxPTODuration = 1 * time.Second
 )
 
 // Path probe packets are declared lost after this time.
